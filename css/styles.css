@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* ELEMENTS */
+
+:root {
+    --nav-bg: #38AF90;
+    --news-bg: #FFF;
+    --games-bg: #F0F0F0;
+    --footer-bg: #383838;
+    --btn-bg: #DD7E92;
+    --regular-text: #797979;
+    --placeholder-text: #C4C4C4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    margin: 0;
+}
+
+html, body {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    color: var(--regular-text);
+}
+
+a, a:visited, a:hover{
+    color: unset;
+    text-decoration: none;
+}
+
+/* CLASSES & IDS */
+
+.container {
+    width: 100%;
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.nav-container {
+    background-color: var(--nav-bg);
+    height: 90px;
+    width: 100%;
+    padding: 14px 10px;
+    position: fixed;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.5);
+}
+
+.nav-box {
+    color: var(--news-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.nav-menu-box {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-menu li {
+    margin: 15px;
+    font-size: 14px;
+}
+
+.nav-img {
+    height: 62px;
+    width: 62px;
+    margin-left: 15px;
+}
+
+#news {
+    background-color: var(--news-bg);
+    padding: 90px 10px 40px 10px;
+}
+
+.section-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-section-title {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 8px;
+}
+
+.news-article-container {
+    background-color: var(--games-bg);
+    padding: 16px 12px 12px 12px;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+    font-size: 10px;
+    margin-bottom: 28px;
+}
+
+.news-article-title {
+    color: var(--nav-bg);
+    font-size: 1rem;
+}
+
+.news-article-subtitle {
+    font-size: 12px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--nav-bg);
+}
+
+.news-article-date {
+    color: var(--nav-bg);
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+.news-article-link {
+    color: var(--btn-bg);
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 7px;
+}
+
+.news-article-link a:hover {
+    color: var(--btn-bg);
+}
+
+.generic-btn {
+    height: 67px;
+    width: 244px;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.go-btn {
+    background-color: var(--btn-bg);
+    color: var(--news-bg);
+    border: 0;
+}
+
+.generic-btn a:visited, a:hover {
+    color: var(--news-bg);
+}
+
+#games {
+    background-color: var(--games-bg);
+    padding: 40px 10px;
+    width: 100%;
+}
+
+.games-section-title {
+    color: var(--nav-bg);
+    font-size: 1.5rem;
+}
+
+.games-card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.games-card {
+    background-color: var(--news-bg);
+    width: 300px;
+    margin: 28px 10px 0 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px 0 rgba(0,0,0,0.25);
+}
+
+.games-card img {
+    width: 300px;
+    border-radius: 8px 8px 0 0;
+}
+
+.games-card-description-box {
+    height: 160px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.games-card-description-box h2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.games-card-description-company {
+    font-size: 12px;
+}
+
+.games-card-description-company span{
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--nav-bg);
+}
+
+.games-card-description-score {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--nav-bg);
+    margin-top: 15px;
+}
+
+#subscription {
+    background-color: var(--news-bg);
+    padding: 40px 8px;
+}
+
+.subscription-section-title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.subscription-form-container {
+    background-color: var(--games-bg);
+    max-width: 790px;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 52px 12px 33px 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+}
+
+input[type='text'], input[type='email'] {
+    height: 50px;
+    width: 100%;
+    background: var(--news-bg);
+    border: 1px solid var(--regular-text);
+    border-radius: 4px;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+::placeholder {
+    color: var(--placeholder-text);
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+}
+
+input[type='radio'], input[type='checkbox'] {
+    height: 23px;
+    width: 23px;
+    margin-right: 7px;
+    background-color: var(--news-bg);
+    border: 1px solid var(--regular-text);
+}
+
+.subscription-form-option {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+#ctr-platform {
+    margin-bottom: 31px;
+}
+
+.subscription-form-btns-box {
+    margin-top: 47px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.reset-btn {
+    background-color: var(--news-bg);
+    color: var(--btn-bg);
+    border: 2px solid var(--btn-bg);
+    margin-top: 20px;
+    margin-left: 8px;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    height: 302px;
+    padding: 30px 35px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    font-size: 14px;
+    color: var(--news-bg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 37px 0;
+}
+
+.footer-content-item1 {
+    margin-bottom: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 24px;
+    }
+
+    .nav-brand {
+        font-size: 1rem;
+    }
+
+    #news {
+        padding-bottom: 56px;
+    }
+
+    .news-section-title {
+        margin-bottom: 40px;
+    }
+
+    .news-article-container {
+        padding: 16px 40px 15px 40px;
+        margin-bottom: 40px;
+    }
+
+    .news-article-subtitle {
+        font-size: 16px;
+    }
+
+    .news-article-date {
+        margin-bottom: 16px;
+    }
+
+    #games {
+        padding: 36px 0 70px 0;
+    }
+
+    .games-card {
+        margin: 73px 15px 0 15px;
+    }
+
+    #subscription {
+        padding-bottom: 61px;
+    }
+
+    .subscription-section-title {
+        margin-bottom: 40px;
+    }
+
+    .subscription-form-container {
+        padding: 52px 73px;
+    }
+
+    .subscription-form-btns-box {
+        margin-top: 38px;
+        flex-direction: row;
+    }
+
+    .reset-btn {
+        margin-left: 52px;
+        margin-top: 0;
+    }
+
+    footer {
+        height: 190px;
+    }
+
+    .footer-container {
+        justify-content: space-between;
+    }
+
+}
